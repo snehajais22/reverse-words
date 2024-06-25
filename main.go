@@ -154,7 +154,7 @@ func getEnv(varName, defaultValue string) string {
 func main() {
 	release := getEnv("RELEASE", "NotSet")
 	port := getEnv("APP_PORT", "8080")
-	log.Println("Starting Reverse Api", version, "Release:", release, "Commit", gitCommit, "Build", buildTime)
+	log.Println("Starting Reverse Api", version, "Releases (change):", release, "Commit", gitCommit, "Build", buildTime)
 	// Custom registry, this will be used by the /metrics endpoint and will only show the app metrics
 	registry := prometheus.NewRegistry()
 	// Add our custom registers to our custom registry
